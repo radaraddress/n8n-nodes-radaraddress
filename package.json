@@ -1,0 +1,58 @@
+{
+  "name": "n8n-nodes-radaraddress",
+  "version": "1.0.1",
+  "description": "RadarAddress for n8n: verify postal addresses, emails, phone numbers and websites, check Italian tax codes, split names with the right salutation and find duplicate contacts.",
+  "keywords": [
+    "n8n-community-node-package",
+    "radaraddress",
+    "address verification",
+    "email verification",
+    "phone validation",
+    "data quality",
+    "deduplication"
+  ],
+  "license": "MIT",
+  "homepage": "https://www.radaraddress.com/en/n8n-integration",
+  "author": {
+    "name": "RadarWave di Gianluca Sordiglioni",
+    "email": "info@radaraddress.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/radaraddress/n8n-nodes-radaraddress.git"
+  },
+  "scripts": {
+    "build": "rm -rf dist && tsc && node scripts/copia-statici.mjs",
+    "build:watch": "tsc --watch",
+    "dev": "n8n-node dev",
+    "lint": "n8n-node lint",
+    "lint:fix": "n8n-node lint --fix",
+    "test": "node --test test/",
+    "release": "n8n-node release",
+    "prepublishOnly": "n8n-node prerelease"
+  },
+  "files": [
+    "dist"
+  ],
+  "n8n": {
+    "n8nNodesApiVersion": 1,
+    "strict": true,
+    "credentials": [
+      "dist/credentials/RadarAddressApi.credentials.js"
+    ],
+    "nodes": [
+      "dist/nodes/RadarAddress/RadarAddress.node.js"
+    ]
+  },
+  "devDependencies": {
+    "@n8n/node-cli": "*",
+    "eslint": "9.32.0",
+    "n8n-workflow": "^2.16.0",
+    "prettier": "3.6.2",
+    "release-it": "^19.0.4",
+    "typescript": "5.9.2"
+  },
+  "peerDependencies": {
+    "n8n-workflow": "*"
+  }
+}

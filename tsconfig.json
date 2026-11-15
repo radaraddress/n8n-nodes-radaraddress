@@ -1,0 +1,36 @@
+// (c) 2026 RadarWave di Gianluca Sordiglioni - www.radarwave.it
+{
+  "compilerOptions": {
+    "strict": true,
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "target": "es2019",
+    "lib": [
+      "es2022",
+      "dom"
+    ],
+    "noImplicitAny": true,
+    "noImplicitReturns": true,
+    "noUnusedLocals": true,
+    "strictNullChecks": true,
+    "preserveConstEnums": true,
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "incremental": false,
+    "declaration": true,
+    "sourceMap": true,
+    "skipLibCheck": true,
+    "outDir": "./dist/"
+  },
+  "include": [
+    "credentials/**/*",
+    "nodes/**/*",
+    "nodes/**/*.json",
+    "package.json"
+  ],
+  "exclude": [
+    "prova",
+    "node_modules",
+    "dist"
+  ]
+}
