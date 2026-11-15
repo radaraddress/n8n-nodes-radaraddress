@@ -1,0 +1,14 @@
+{
+	"node": "n8n-nodes-radaraddress.radarAddress",
+	"nodeVersion": "1.0",
+	"codexVersion": "1.0",
+	"categories": ["Data & Storage", "Marketing & Content"],
+	"resources": {
+		"credentialDocumentation": [
+			{ "url": "https://www.radaraddress.com/en/n8n-integration" }
+		],
+		"primaryDocumentation": [
+			{ "url": "https://www.radaraddress.com/en/api" }
+		]
+	}
+}
